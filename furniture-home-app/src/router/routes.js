@@ -6,6 +6,9 @@ import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
+import One from '../pages/Afflatus/One/One.vue'
+import Two from '../pages/Afflatus/Two/Two.vue'
+import Three from '../pages/Afflatus/Three/Three.vue'
 
 export default [
   {
@@ -18,6 +21,24 @@ export default [
   {
     path:'/afflatus',
     component: Afflatus,
+    children:[
+      {
+        path:'/afflatus/one',
+        component: One
+      },
+      {
+        path:'/afflatus/two',
+        component: Two
+      },
+      {
+        path:'/afflatus/three',
+        component: Three
+      },
+      {
+        path:'/afflatus',
+        redirect:'/afflatus/one'
+      }
+    ],
     meta: {
       isShowFooter: true
     }
