@@ -2,6 +2,8 @@
 import Vue from 'vue'
 // 引入App.vue
 import App from './App.vue'
+// 引入路由
+import router from './router'
 // 去掉提示
 Vue.config.productionTip = false
 // 创建并暴露Vue实例对象
@@ -14,5 +16,7 @@ export default new Vue({
     App
   },
   // 模板
-  template: '<App/>'
+  template: '<App/>',
+  // 路由
+  router
 })
