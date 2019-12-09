@@ -1,7 +1,7 @@
 // 引入Vue
 import Vue from 'vue'
 // 引入App.vue
-import App from './APP.vue'
+import App from './App.vue'
 // 去掉提示
 Vue.config.productionTip = false
 // 创建并暴露Vue实例对象
