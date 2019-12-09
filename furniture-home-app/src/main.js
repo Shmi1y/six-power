@@ -1,8 +1,18 @@
+// 引入Vue
 import Vue from 'vue'
-import App from './App.vue'
-
+// 引入App.vue
+import App from './APP.vue'
+// 去掉提示
 Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+// 创建并暴露Vue实例对象
+/* eslint-disable no-new */
+export default new Vue({
+  // 容器
+  el: '#app',
+  // 组件
+  components: {
+    App
+  },
+  // 模板
+  template: '<App/>'
+})
