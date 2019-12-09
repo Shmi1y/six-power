@@ -19,7 +19,7 @@
       />
       <span style="color:red" class="errors">{{ errors.first('pwd') }}</span>
       <div class="link">
-        <button class="btn">注 册</button>
+        <button class="btn" @click="register">注 册</button>
         <a href="javascript:;">已有账号登录</a>
       </div>
     </div>
@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+import  {reqRegister} from '../../api/index.js'
 export default {
   name:'Register',
   data () {
@@ -36,6 +37,15 @@ export default {
       phone:'',
       code:'',
       pwd:''
+    }
+  },
+  methods:{
+    register(){
+      const username = this.phone
+      const password = this.pwd
+      // eslint-disable-next-line no-console
+      console.log(username,password)
+      reqRegister (username,password)
     }
   }
 }
