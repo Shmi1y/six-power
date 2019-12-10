@@ -1,18 +1,4 @@
 <template>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div>
-    <a
-      href="javascript:"
-      class="profile-link"
-      @click="$router.push('/info')"
-    >
-    我的
-    </a>
-    <router-view />
-=======
-=======
->>>>>>> dev-ll
   <div class="header">
     <div class="header-top">
       <h1>消息</h1>
@@ -49,10 +35,6 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> dev-ll
-=======
->>>>>>> dev-ll
   </div>
 </template>
 <script src="./iconfont.js">
