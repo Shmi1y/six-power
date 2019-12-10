@@ -12,7 +12,7 @@
 				普通会员
 			</div>
 		</div>
-    
+
 		<!-- <div class="aui-flex aui-flex-one">
 			<div class="aui-flex-box" style="background:#ffe4e4">
 				<h3>还款金</h3>
@@ -118,7 +118,10 @@
 				</div>
 			</a>
 		</div>
+
+    <!-- 视图 标签-->
     <router-view></router-view>
+
 	</section>
 </template>
 <script>

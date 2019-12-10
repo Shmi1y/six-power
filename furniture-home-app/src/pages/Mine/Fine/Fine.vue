@@ -1,8 +1,8 @@
 <template>
     <section>
         <div class="yi-header">
+          <!-- 箭头  点击事件 返回-->
           <img src="../images/shouhuo1.png" @click="goto('/mine')" alt="">
-          <!-- 箭头 -->
             <h2>待收货</h2>
         </div>
 
@@ -53,6 +53,7 @@
 export default {
     name:'Fine',
     // props: ['isShow']
+    //点击箭头返回
     methods: {
       goto(path){
         this.$router.push(path)

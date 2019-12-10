@@ -5,7 +5,6 @@ import News from '../pages/News/News.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
 import Fine from '../pages/Mine/Fine/Fine.vue'
-//b
 export default [
   {
     path:'/home',
