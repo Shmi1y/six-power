@@ -4,6 +4,7 @@ import Afflatus from '../pages/Afflatus/Afflatus.vue'
 import News from '../pages/News/News.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
+import Fine from '../pages/Mine/Fine/Fine.vue'
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
 import Detalis from '../pages/Detalis/Detalis.vue'
@@ -55,6 +56,10 @@ export default [
   {
     path:'/detalis',
     component:Detalis
+  },
+  {
+    path:'/fine',
+    component:Fine
   },
   {
     path:'/',
