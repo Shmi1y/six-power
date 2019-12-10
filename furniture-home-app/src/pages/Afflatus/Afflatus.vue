@@ -11,21 +11,36 @@
         <router-link to="/afflatus/three">生活乐趣</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <router-view ></router-view>
   </div>
 </template>
 <script>
 export default {
-  name: "Afflatus"
+  name: "Afflatus",
+  // data(){
+  //   return{
+  //     isShow:''
+  //   }
+  // },
+  // mounted(){
+  //   this.$on('isShowChild',isShow => {
+  //     this.isShow = isShow
+  //   })
+  // },
+  // methods:{
+  //   isShowChild( ){
+  //     this.isShow=!this.isShow
+  //   }
+  // }
 };
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 @import '../../common/stylus/mixins.styl'
 .tab
   clearFix()
-  
   background #ffffff
   .tab-item
+    vertical-align bottom
     margin 15px
     float left
     font-size 16px

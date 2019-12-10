@@ -9,6 +9,7 @@ import Register from '../pages/Register/Register.vue'
 import One from '../pages/Afflatus/One/One.vue'
 import Two from '../pages/Afflatus/Two/Two.vue'
 import Three from '../pages/Afflatus/Three/Three.vue'
+import AfflatusContent from '../pages/Afflatus/AfflatusContent/AfflatusContent.vue'
 
 export default [
   {
@@ -24,15 +25,42 @@ export default [
     children:[
       {
         path:'/afflatus/one',
-        component: One
+        component: One,
+        meta: {
+          isShowFooter: true
+        },
+        children:[
+          {
+            path:'/afflatus/one/afflatus_content',
+            component:AfflatusContent
+          }
+        ]
       },
       {
         path:'/afflatus/two',
-        component: Two
+        component: Two,
+        meta: {
+          isShowFooter: true
+        },
+        children:[
+          {
+            path:'/afflatus/two/afflatus_content',
+            component:AfflatusContent
+          }
+        ]
       },
       {
         path:'/afflatus/three',
-        component: Three
+        component: Three,
+        meta: {
+          isShowFooter: true
+        },
+        children:[
+          {
+            path:'/afflatus/three/afflatus_content',
+            component:AfflatusContent
+          }
+        ]
       },
       {
         path:'/afflatus',

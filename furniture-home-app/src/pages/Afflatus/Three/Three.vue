@@ -42,6 +42,7 @@
         <img src="../imgs/02.jpg" alt />
       </li>
     </ul>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -51,7 +52,7 @@ export default {
 };
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-@import "../../../common/stylus/mixins.styl"
+@import '../../../common/stylus/mixins.styl'
 .page_one
   width 100%
   .one_item
@@ -68,6 +69,6 @@ export default {
     .content
       font-size 18px
       padding-bottom 10px
-    img 
+    img
       width 100%
 </style>

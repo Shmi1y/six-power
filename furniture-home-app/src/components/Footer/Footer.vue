@@ -14,7 +14,7 @@
     <a
       href="javascript:;"
       class="guide_item"
-      :class="{ on: $route.path === '/afflatus' }"
+      :class="{ on: $route.path === '/afflatus/one' }"
       @click="goto('/afflatus')"
     >
       <span class="item_icon">
