@@ -58,6 +58,7 @@
       <img src="./images/shafa02.jpg" alt="沙发">
     </div>
   </div>
+  
 </template>
 <script src="./iconfont.js"></script>
 <script>
