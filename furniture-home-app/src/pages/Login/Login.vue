@@ -26,9 +26,9 @@
               <span style="color:red" class="errors">{{ errors.first('code') }}</span>
             </div>
             <div class="link">
-              <button class="login">登 录</button>
+              <button class="login" @click.prevent="login" >登 录</button>
               <a class="left_link" href="javascript:;">切换账号</a>
-              <a class="right_link" href="javascript:;">新用户注册</a>
+              <a class="right_link" href="javascript:;" @click="$router.replace('/register')" >新用户注册</a>
             </div>
           </section>
         </div>
