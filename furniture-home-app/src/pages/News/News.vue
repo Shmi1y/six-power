@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div>
     <a
       href="javascript:"
@@ -10,6 +11,8 @@
     </a>
     <router-view />
 =======
+=======
+>>>>>>> dev-ll
   <div class="header">
     <div class="header-top">
       <h1>消息</h1>
@@ -46,6 +49,9 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+>>>>>>> dev-ll
+=======
 >>>>>>> dev-ll
   </div>
 </template>
@@ -105,8 +111,8 @@ html
           height 20px
           color #ffffff
           border-radius 50%
-          background-color #ff0000 
-          line-height 20px  
+          background-color #ff0000
+          line-height 20px
           text-align center
       .content-discounts
         width 100%
@@ -131,8 +137,8 @@ html
           height 20px
           color #ffffff
           border-radius 50%
-          background-color #ff0000 
-          line-height 20px  
+          background-color #ff0000
+          line-height 20px
           text-align center
       .content-news
         width 100%

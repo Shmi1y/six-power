@@ -14,9 +14,14 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "vee-validate": "^2.2.13",
 =======
     "swiper": "^5.2.1",
+>>>>>>> dev-ll
+=======
+    "swiper": "^5.2.1",
+    "vee-validate": "^2.2.13",
 >>>>>>> dev-ll
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
@@ -43,7 +48,11 @@
     ],
     "rules": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "no-console": 2
+=======
+      "no-console": "off"
+>>>>>>> dev-ll
 =======
       "no-console": "off"
 >>>>>>> dev-ll
