@@ -7,10 +7,13 @@ let koa = new Koa()
 // 实例化KoaRouter
 let koaRouter = new KoaRouter()
 require('./db');
-// const sms_util = require('./util/sms_util')
+const sms_util = require('./util/sms_util')
+const users = {}
+// const createToken = require('../token/createToken')
+// const checkToken = require('../token/checkToken')
 // 引入detas数据
 // let datas = require('./datas/data.json')
-// const Users = require('./models/users');
+const Users = require('./models/users')
 //接口
 // search的接口
 // koaRouter.get('/search',(ctx) => {
@@ -18,68 +21,88 @@ require('./db');
 //   console.log(result)
 //   ctx.body = datas
 // })
+
+//login的接口
+koaRouter.get('/login',async (ctx) => {
+  const {username,password} = ctx.query
+  // eslint-disable-next-line no-console
+  console.log(username,password)
+  // console.log(result)
+  // ctx.body= "哈哈哈哈"
+  // eslint-disable-next-line no-console
+  console.log(Users)
+  let user=await Users.findOne({ username });
+  // console.log(result)
+  //   result.then((user) => {
+      if (user) {
+        // eslint-disable-next-line no-consoles
+        if(user.password !== password){
+          // eslint-disable-next-line no-console
+          ctx.body = { code: 1, msg: '用户名或密码不正确!' }
+        }else{
+          ctx.body ={ code: 0, data:{_id: user._id, username: user.username} }
+        }
+        // return new Promise(() => {}) // 返回一个不调用resolve()/reject()的promise对象
+      }else{
+        ctx.body = { code: 2, msg: '用户名不存在' }
+      }
+    // })
+})
 // register的接口
 koaRouter.post('/register', async (ctx) => {
   // eslint-disable-next-line no-console
   console.log(ctx.query.username)
-  // const {username,password}= ctx.query.req
-  // eslint-disable-next-line no-console
-  // console.log(username,password)
-  // const{username，password} = result
-  // eslint-disable-next-line no-console
-  // console.log(username,password)
-  ctx.body="aaa"
-  // try {
-  //   let user = await Users.findOne({username});
+  const { username,password } =ctx.query
+  try {
+    let user = await Users.findOne({username});
+    if (user) {
+      ctx.body = {status: 1, msg: '此用户已存在'};
+      return;
+    }
+    user = await Users.create({username, password});
+    ctx.body={
+      status: 0,
+      data: {
+        username, _id: user._id
+      }
+    };
+  } catch (error) {
 
-  //   if (user) {
-  //     ctx.json({status: 1, msg: '此用户已存在'});
-  //     return;
-  //   }
-
-  //   user = await Users.create({username, password});
-
-  //   ctx.json({
-  //     status: 0,
-  //     data: {
-  //       username, _id: user._id
-  //     }
-  //   });
-  // } catch (error) {
-
-  //   ctx.json({status: 1, msg: '注册用户失败'});
-  // }
+    ctx.body ={status: 1, msg: '注册用户失败'};
+  }
 
 })
-// login的接口
-//koaRouter.get('/login',(ctx) => {
-  //const result = ctx.query.req
-  //console.log(result)
-  //ctx.body= "哈哈哈哈"
-//})
+/
 
 /*
 发送验证码短信
 */
-// koaRouter('/sendcode', (ctx) =>{
-//   //1. 获取请求参数数据
-//   var phone = ctx.query.phone;
-//   //2. 处理数据
-//   //生成验证码(6位随机数)
-//   var code = sms_util.randomCode(6);
-//   //发送给指定的手机号
-//   //console.log(`向${phone}发送验证码短信: ${code}`);
-//   sms_util.sendCode(phone, code, function (success) {//success表示是否成功
-//     if (success) {
-//       users[phone] = code
-//       //console.log('保存验证码: ', phone, code)
-//       ctx.send({ "code": 0 })
-//     } else {
-//       //3. 返回响应数据
-//       ctx.send({ "code": 1, msg: '短信验证码发送失败' })
-//     }
-//   })
-// })
+koaRouter.get('/sendcode', (ctx) =>{
+  //1. 获取请求参数数据
+  let phone = ctx.query.phone;
+  // eslint-disable-next-line no-console
+  console.log(phone)
+  //2. 处理数据
+  //生成验证码(6位随机数)
+  let code = sms_util.randomCode(6);
+  //发送给指定的手机号
+  // eslint-disable-next-line no-console
+  console.log(`向${phone}发送验证码短信: ${code}`);
+  sms_util.sendCode(phone, code, function (success) {
+    // eslint-disable-next-line no-console
+    console.log(success)
+    if (success) {
+      users[phone] = code
+      // eslint-disable-next-line no-console
+      console.log('保存验证码: ', phone, code)
+      ctx.body = { code: 0 }
+    } else {
+      //3. 返回响应数据
+      ctx.body= { code: 1, msg: '短信验证码发送失败' }
+    }
+  })
+  // ctx.body ='2222'
+})
 // 使用koa的路由相关的方法
 koa
   .use(koaRouter.routes())//声明可以使用所有的路由

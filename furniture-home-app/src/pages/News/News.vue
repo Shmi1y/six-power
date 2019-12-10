@@ -1,6 +1,13 @@
 <template>
   <div>
-    news
+    <a
+      href="javascript:"
+      class="profile-link"
+      @click="$router.push('/info')"
+    >
+    我的
+    </a>
+    <router-view />
   </div>
 </template>
 <script>

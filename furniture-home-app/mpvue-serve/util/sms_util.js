@@ -59,17 +59,18 @@ function sendCode(phone, code, callback) {
         'Content-Type' :'application/json;charset=utf-8',
         'Content-Length': JSON.stringify(body).length+'',
         'Authorization' : authorization
-    }
-
+    };
     //4. 发送请求, 并得到返回的结果, 调用callback
-	  // callback(true);
+    // callback(true);
+    
     request({
-        method : 'POST',
-        url : url,
-        headers : headers,
-        body : body,
-        json : true
+      method : 'POST',
+      url : url,
+      headers : headers,
+      body : body,
+      json : true
     }, function (error, response, body) {
+        // eslint-disable-next-line no-console
         console.log(error, response, body);
         callback(body.statusCode==='000000');
         // callback(true);

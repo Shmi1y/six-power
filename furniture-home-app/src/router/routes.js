@@ -6,7 +6,7 @@ import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
-
+import Info from '../pages/News/Info/Info.vue'
 export default [
   {
     path:'/home',
@@ -27,7 +27,13 @@ export default [
     component: News,
     meta: {
       isShowFooter: true
-    }
+    },
+    children:[
+      {
+        path:'/info',
+        component:Info
+      }
+    ]
   },
   {
     path:'/shopcart',

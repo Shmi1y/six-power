@@ -44,6 +44,8 @@ axios.interceptors.request.use(config => {
 })
 // 添加响应拦截器
 axios.interceptors.response.use(response => {
+  // eslint-disable-next-line no-console
+  console.log(response.data)
   return response.data
 }, error => {
   // 请求错误
