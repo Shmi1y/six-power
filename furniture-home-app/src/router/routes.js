@@ -4,9 +4,13 @@ import Afflatus from '../pages/Afflatus/Afflatus.vue'
 import News from '../pages/News/News.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
+<<<<<<< HEAD
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
 import Info from '../pages/News/Info/Info.vue'
+=======
+import Detalis from '../pages/Detalis/Detalis.vue'
+>>>>>>> dev-ll
 export default [
   {
     path:'/home',
@@ -56,6 +60,10 @@ export default [
   {
     path:'/register',
     component: Register
+  },
+  {
+    path:'/detalis',
+    component:Detalis
   },
   {
     path:'/',
