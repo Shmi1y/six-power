@@ -3,18 +3,24 @@
     <!-- 路由视图 -->
     <router-view />
     <!-- 底部组件 -->
-    <Footer />
+    <Footer v-show="$route.meta.isShowFooter"/>
   </div>
 </template>
 <script>
 // 引入Footer
 import Footer from './components/Footer/Footer.vue'
 export default {
-  name:'App',
+  name: 'App',
   // 注册组件
-  components:{
+  components: {
     Footer
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus"></style>
+<style lang="stylus" rel="stylesheet/stylus">
+#app
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+</style>

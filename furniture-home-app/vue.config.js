@@ -13,5 +13,17 @@ module.exports = {
         '@': resolve('src')
       }
     }
+  },
+  // 解决跨域问题，服务器代理
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '', // rewrite path
+        }
+      }
+    }
   }
 }

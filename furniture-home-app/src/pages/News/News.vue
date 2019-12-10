@@ -93,8 +93,8 @@ html
           height 20px
           color #ffffff
           border-radius 50%
-          background-color #ff0000 
-          line-height 20px  
+          background-color #ff0000
+          line-height 20px
           text-align center
       .content-discounts
         width 100%
@@ -119,8 +119,8 @@ html
           height 20px
           color #ffffff
           border-radius 50%
-          background-color #ff0000 
-          line-height 20px  
+          background-color #ff0000
+          line-height 20px
           text-align center
       .content-news
         width 100%
