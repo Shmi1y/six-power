@@ -1,6 +1,5 @@
 <template>
-  <div @click="$router.push('/detalis')">
-    home
+  <div>
   </div>
 </template>
 <script>

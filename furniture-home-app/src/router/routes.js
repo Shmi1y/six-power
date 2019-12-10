@@ -4,6 +4,7 @@ import Afflatus from '../pages/Afflatus/Afflatus.vue'
 import News from '../pages/News/News.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Mine from '../pages/Mine/Mine.vue'
+import Detalis from '../pages/Detalis/Detalis.vue'
 export default [
   {
     path:'/home',
@@ -24,6 +25,10 @@ export default [
   {
     path:'/mine',
     component: Mine
+  },
+  {
+    path:'/detalis',
+    component:Detalis
   },
   {
     path:'/',
