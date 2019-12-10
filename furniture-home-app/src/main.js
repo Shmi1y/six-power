@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App.vue'
 // 引入路由
 import router from './router'
+// 引入vue的表单验证插件veeValidate
+import './vee-validate'
 // 去掉提示
 Vue.config.productionTip = false 
 // 创建并暴露Vue实例对象
