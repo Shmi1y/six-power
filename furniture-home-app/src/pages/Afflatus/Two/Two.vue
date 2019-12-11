@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="page_one" v-if="isShow" >
+    <ul class="page_one" >
       <li class="one_item_two" @click='isShowDetail'>
         <h2 class="title">伊克特</h2>
         <p class="content">
@@ -42,25 +42,15 @@
         <img src="../imgs/04.jpg" alt />
       </li>
     </ul>
-    <router-view v-if="!isShow" :isShowChild="isShowChild"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 <script>
 export default {
   name: "Three",
-  component: {},
-  data(){
-    return{
-      isShow:true
-    }
-  },
   methods:{
     isShowDetail(){
-      this.$router.push('/afflatus/one/afflatus_content')
-      this.isShowChild()
-    },
-    isShowChild(){
-      this.isShow=!this.isShow
+      this.$router.push('/afflatus_content')
     }
   }
 };

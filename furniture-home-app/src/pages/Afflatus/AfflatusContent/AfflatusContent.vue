@@ -24,7 +24,7 @@
               $
               <span class="price">298</span>
             </p>
-            <div class="shopping">立即购买</div>
+            <div class="shopping" @click="buy">立即购买</div>
           </div>
         </div>
       </div>
@@ -52,7 +52,9 @@ export default {
   methods: {
     link() {
       this.$router.back();
-      this.isShowChild();
+    },
+    buy() {
+      this.$router.push('/shopcart')
     }
   }
 };
@@ -140,13 +142,13 @@ export default {
         font-size 18px
     .icon-item1
       float left
-      // margin 0 10px
+      margin 10px 0
       .iconfont
         font-size 18px
         padding 4px
     .icon-item2
       float right
-      // margin 9px
+      margin 9px
       .iconfont
         font-size 22px
 </style>

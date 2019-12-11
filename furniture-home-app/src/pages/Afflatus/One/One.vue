@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="page_one" v-if="isShow">
+    <ul class="page_one">
       <li class="one_item"  @click='isShowDetail'>
         <h2 class="title">井井有条的温馨绿洲</h2>
         <p class="content">
@@ -34,36 +34,17 @@
         <img src="../imgs/01.jpg" alt />
       </li>
     </ul>
-    <router-view v-if="!isShow" :isShowChild="isShowChild"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 <script>
 export default {
   name: "One",
-  data(){
-    return{
-      isShow:true
-    }
-  },
   methods:{
     isShowDetail(){
-      this.$router.push('/afflatus/one/afflatus_content')
-      this.isShowChild()
-      // this.isShowChild(isShow)
-      //this.$emit('isShowChild',this.isShow)
-    },
-    isShowChild(){
-      this.isShow=!this.isShow
+      this.$router.push('/afflatus_content')
     }
-  },
-  // computed:{
-  //   get(){
-  //     return this.isShow
-  //   },
-  //   set(){
-  //     this.$bus.$emit('isShowChild',this.isShow)
-  //   }
-  // }
+  }
 };
 </script>
 <style lang="stylus" rel="stylesheet/stylus">

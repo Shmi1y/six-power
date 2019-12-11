@@ -28,39 +28,21 @@ export default [
         component: One,
         meta: {
           isShowFooter: true
-        },
-        children:[
-          {
-            path:'/afflatus/one/afflatus_content',
-            component:AfflatusContent
-          }
-        ]
+        }
       },
       {
         path:'/afflatus/two',
         component: Two,
         meta: {
           isShowFooter: true
-        },
-        children:[
-          {
-            path:'/afflatus/two/afflatus_content',
-            component:AfflatusContent
-          }
-        ]
+        }
       },
       {
         path:'/afflatus/three',
         component: Three,
         meta: {
           isShowFooter: true
-        },
-        children:[
-          {
-            path:'/afflatus/three/afflatus_content',
-            component:AfflatusContent
-          }
-        ]
+        }
       },
       {
         path:'/afflatus',
@@ -70,6 +52,10 @@ export default [
     meta: {
       isShowFooter: true
     }
+  },
+  {
+    path:'/afflatus_content',
+    component:AfflatusContent
   },
   {
     path:'/news',

@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="page_one">
-      <li class="one_item">
+      <li class="one_item" @click='isShowDetail'>
         <h2 class="title">举办一场随性自有的花园派对</h2>
         <p class="content">
           装饰简洁清雅的书房，延伸着我感性的触角。在这个灵性的空间里，把我孤独的灵魂放飞。
@@ -48,7 +48,11 @@
 <script>
 export default {
   name: "Three",
-  component: {}
+  methods:{
+    isShowDetail(){
+      this.$router.push('/afflatus_content')
+    }
+  }
 };
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
