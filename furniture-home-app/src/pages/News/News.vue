@@ -42,9 +42,6 @@
 export default {};
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-html
-  /* overflow-y hidden
-  overflow-x hidden */
   .icon
     width 1em
     height 1em
@@ -54,10 +51,9 @@ html
     font-size 35px
     margin-right 20px
   .header
-    width 100%
-    height 100%
-    padding-left 20px
+    padding-left 14px
     margin-top 20px
+    padding-right 30px
     .header-top
       width 100%
       height 40px

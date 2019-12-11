@@ -1,6 +1,6 @@
 <template>
   <!-- 详情组件 -->
-  <div class="header">
+  <div class="detalis-content">
     <!--swiper-->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -30,42 +30,51 @@
       </li>
       <li class="li-2">HAY沙发椅</li>
       <li class="li-3">北欧现代简约沙发椅</li>
-      <li class="li-4">￥
-        <span>8530-14300</span> 
-        </li>
+      <li class="li-4">
+        ￥
+        <span>8530-14300</span>
+      </li>
       <li class="li-5">运费700.00元</li>
       <li class="li-6">6人已买</li>
     </ul>
     <ul class="ul-2">
       <li class="li-7">
-        <span>优惠  满10000减300, 满600减100</span>
+        <span>优惠 满10000减300, 满600减100</span>
         <div>></div>
-        </li>
+      </li>
       <li class="li-8">
-        <span>已选  Coda-100羊毛布面</span>
+        <span>已选 Coda-100羊毛布面</span>
         <div>...</div>
       </li>
-      <li class="li-9">服务  世界设计  7天退换  免费安装</li>
+      <li class="li-9">服务 世界设计 7天退换 免费安装</li>
       <li class="li-10">
-        <span>组合  组合最高可减2000元!</span>
+        <span>组合 组合最高可减2000元!</span>
         <div>></div>
       </li>
     </ul>
     <div class="footer">
-      <img src="./images/shafa01.jpg" alt="沙发">
-      <img src="./images/shafa04.jpg" alt="沙发">
-      <img src="./images/shafa03.jpg" alt="沙发">
-      <img src="./images/shafa02.jpg" alt="沙发">
+      <img src="./images/shafa01.jpg" alt="沙发" />
+      <img src="./images/shafa04.jpg" alt="沙发" />
+      <img src="./images/shafa03.jpg" alt="沙发" />
+      <img src="./images/shafa02.jpg" alt="沙发" />
     </div>
+    <div class="Img">
+      <img @click="$router.back()" src="./images/fanhui.png" alt="">
+    </div>
+    <BuyFooter />
   </div>
-  
 </template>
-<script src="./iconfont.js"></script>
 <script>
+//引入矢量图js
+import './iconfont.js'
 //引入swiper
 import Swiper from "swiper";
+import BuyFooter from "../../components/BuyFooter/BuyFooter.vue";
 import "swiper/css/swiper.css";
 export default {
+  components: {
+    BuyFooter
+  },
   mounted() {
     this.$nextTick(() => {
       new Swiper(".swiper-container", {
@@ -78,19 +87,16 @@ export default {
     });
   }
 };
-</scriptscript>
+</script>
 <style lang="stylus" rel="stylesheet/stylus">
 .icon
-    width 1em
-    height 1em
-    vertical-align -0.15em
-    fill currentColor
-    font-size 35px
-    margin-right 20px
-.header
-  overflow-y auto !important
-  margin-top 0 !important
-  padding-left 0 !important
+  width 1em
+  height 1em
+  vertical-align -0.15em
+  fill currentColor
+  font-size 35px
+  margin-right 20px
+.detalis-content
   .swiper-container
     width 100%
     height 100%
@@ -118,7 +124,7 @@ export default {
       margin-bottom 16px
     .li-4
       margin-bottom 20px
-      span 
+      span
         font-size 25px
     .li-5
       font-size 14px
@@ -139,7 +145,7 @@ export default {
       padding-top 15px
       padding-bottom 15px
       div
-        float right 
+        float right
     .li-9
       border-top 1px solid #999999
       padding-top 15px
@@ -149,9 +155,18 @@ export default {
       padding-top 15px
       padding-bottom 15px
       div
-        float right 
-  .footer 
-    img 
+        float right
+  .footer
+    img
       width 100%
       height 240px
+  .Img 
+    position fixed
+    left 10px
+    top 10px
+    z-index 100
+    img 
+      width 20px
+      height 20px
+
 </style>                                            

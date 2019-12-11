@@ -7,6 +7,7 @@ import Mine from '../pages/Mine/Mine.vue'
 import Detalis from '../pages/Detalis/Detalis.vue'
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
+import ShopLists from '../pages/ShopLists/ShopLists.vue'
 
 export default [
   {
@@ -55,6 +56,10 @@ export default [
   {
     path:'/detalis',
     component:Detalis
+  },
+  {
+    path:'/shoplists',
+    component:ShopLists
   },
   {
     path:'/',
