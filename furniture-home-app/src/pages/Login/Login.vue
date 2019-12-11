@@ -72,9 +72,15 @@ export default {
       // eslint-disable-next-line no-console
       console.log(result)
       if(result.code ===0){
+        //登录成功
+        const user = result.data
         // eslint-disable-next-line no-console
         console.log(result.data)
-        this.$router.replace('/home')
+         // 保存用户信息
+        this.$store.dispatch('saveUser', user)
+        // 跳转个人中心
+        this.$router.replace('/mine')
+        // this.$router.replace('/home')
       }else if(result.code === 1){
         // this.$router.replace('/register')
         // eslint-disable-next-line no-console

@@ -3,7 +3,7 @@ import axios from 'axios'
 // 引入qs,将对象类型数据转换成urlEncoding类型数据
 import qs from 'qs'
 // 引入store
-// import store from '../store'
+import store from '../store'
 // 引入router
 import router from '../router'
 // 引入mint-ui组件中的Toast
@@ -21,25 +21,25 @@ axios.interceptors.request.use(config => {
     // eslint-disable-next-line no-console
     console.log(config.data)
   }
-  // 判断当前接口是否需要携带token
-  // if (config.headers.needToken) {
-  //   // 如果需要，从state中取出token
-  //   console.log(store.state)
-  //   const token  = store.state.user.token
-  //   console.log(token)
-  //   // 然后判断是否有token
-  //   if (token) {
-  //     // 如果有token，将token添加到请求头的authorization
-  //     config.headers.authorization = token
-  //   } else {
-  //     // 如果没有token,创建一个错误实例传入错误提示信息
-  //     const error = new Error('没有token，请重新登录')
-  //     // 给错误实例添加错误状态码
-  //     error.status = 401
-  //     // 抛出错误异常 
-  //     throw error
-  //   }
-  // }
+  //判断当前接口是否需要携带token
+  if (config.headers.needToken) {
+    // 如果需要，从state中取出token
+    console.log(store.state)
+    const token  = store.state.user.token
+    console.log(token)
+    // 然后判断是否有token
+    if (token) {
+      // 如果有token，将token添加到请求头的authorization
+      config.headers.authorization = token
+    } else {
+      // 如果没有token,创建一个错误实例传入错误提示信息
+      const error = new Error('没有token，请重新登录')
+      // 给错误实例添加错误状态码
+      error.status = 401
+      // 抛出错误异常 
+      throw error
+    }
+  }
   return config
 })
 // 添加响应拦截器

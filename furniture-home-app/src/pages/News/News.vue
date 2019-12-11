@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="news_header">
     <div class="header-top">
       <h1>消息</h1>
       <span>3条未读消息</span>
@@ -42,9 +42,6 @@
 export default {};
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-html
-  /* overflow-y hidden
-  overflow-x hidden */
   .icon
     width 1em
     height 1em
@@ -53,11 +50,10 @@ html
     overflow hidden
     font-size 35px
     margin-right 20px
-  .header
-    width 100%
-    height 100%
-    padding-left 20px
-    margin-top 20px
+  .news_header
+    width 90%
+    margin  10px auto
+    overflow hidden
     .header-top
       width 100%
       height 40px

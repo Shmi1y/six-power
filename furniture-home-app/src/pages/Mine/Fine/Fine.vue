@@ -2,7 +2,7 @@
     <section>
         <div class="yi-header">
           <!-- 箭头  点击事件 返回-->
-            <img src="../images/shouhuo1.png" @click="goto('/mine')" alt="">
+          <img src="../images/fanhui.png" @click="goto('/mine')" alt="">
             <h2>待收货</h2>
         </div>
 
@@ -75,6 +75,7 @@ export default {
 .er-daishou
   display flex
   /* align-items center */
+  box-shadow 0px 12px 8px -15px #d3d3d6
  
   padding 20px 10px 0px 
   img

@@ -127,10 +127,10 @@
       }
     ]
   },
-  "categorys":{
+  "category":{
     "hometool":[
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"板凳",
         "shops":[
           {
@@ -508,7 +508,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-xiaoxi",
         "name":"桌子",
         "shops":[
           {
@@ -886,7 +886,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shuju",
         "name":"床",
         "shops":[
           {
@@ -1264,7 +1264,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"沙发",
         "shops":[
           {
@@ -1642,7 +1642,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"柜架",
         "shops":[
           {
@@ -2020,7 +2020,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"灯具",
         "shops":[
           {
@@ -2398,7 +2398,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"茶几",
         "shops":[
           {
@@ -2776,7 +2776,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"装饰",
         "shops":[
           {
@@ -3154,7 +3154,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"收纳",
         "shops":[
           {
@@ -3532,7 +3532,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"餐具",
         "shops":[
           {
@@ -3910,7 +3910,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"卫浴",
         "shops":[
           {
@@ -4288,7 +4288,7 @@
         ]
       },
       {
-        "icon":"xx",
+        "icon":"icon-shouye",
         "name":"家纺",
         "shops":[
           {
@@ -4668,28 +4668,28 @@
     ],
     "areaplot":[
       {
-        "icon":"xxxx",
-        "area":"客厅"
+        "icon":"icon-shouye",
+        "name":"客厅"
       },
       {
-        "icon":"xxxx",
-        "area":"卧室"
+        "icon":"icon-xiaoxi",
+        "name":"卧室"
       },
       {
-        "icon":"xxxx",
-        "area":"书房"
+        "icon":"icon-shuju",
+        "name":"书房"
       },
       {
-        "icon":"xxxx",
-        "area":"浴室"
+        "icon":"icon-shouye",
+        "name":"浴室"
       },
       {
-        "icon":"xxxx",
-        "area":"阳台"
+        "icon":"icon-xiaoxi",
+        "name":"阳台"
       },
       {
-        "icon":"xxxx",
-        "area":"厨房"
+        "icon":"icon-shuju",
+        "name":"厨房"
       }
     ]
   }

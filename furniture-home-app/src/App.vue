@@ -11,6 +11,10 @@
 import Footer from './components/Footer/Footer.vue'
 export default {
   name: 'App',
+  //  mounted () {
+  //   // 自动登录的操作
+  //   this.$store.dispatch('autoLogin')
+  // },
   // 注册组件
   components: {
     Footer

@@ -20,3 +20,6 @@ export const reqAutoLogin = () => ajax({
     needToken: true
   }
 })
+// 分类信息
+export const reqCategory = () => ajax('/category')
+export const reqAfflatus = () => ajax('/afflatus')

@@ -6,6 +6,13 @@ import App from './App.vue'
 import router from './router'
 // 引入vue的表单验证插件veeValidate
 import './vee-validate'
+// 引入mock
+import './mock'
+// 引入store
+import store from './store'
+import Vant from 'vant'
+import 'vant/lib/index.css'
+Vue.use(Vant)
 // 去掉提示
 Vue.config.productionTip = false 
 // 创建并暴露Vue实例对象
@@ -20,5 +27,6 @@ export default new Vue({
   // 模板
   template: '<App/>',
   // e  路由
-  router
+  router,
+  store
 })
