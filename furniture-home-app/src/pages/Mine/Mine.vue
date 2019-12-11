@@ -47,10 +47,14 @@
         <h3>12</h3>
         <span>收藏</span>
       </div>
-      <div class="er-shoucang">
-        <h3>10</h3>
-        <span>卡卷</span>
-      </div>
+
+      <router-link to="/receiving">
+        <div class="er-shoucang">
+          <h3>10</h3>
+          <span>卡卷</span>
+        </div>
+      </router-link>
+
       <div class="er-shoucang">
         <h3>3</h3>
         <span>钱包</span>
@@ -68,38 +72,55 @@
         </div>
       </router-link>
 
-      <div class="fukuan">
-        <img src="./images/san02.png" alt="">
-        <p>待收货</p>
-      </div>
-      <div class="fukuan">
-        <img src="./images/san03.png" alt="">
-        <p>待评价</p>
-      </div>
-      <div class="fukuan">
-        <img src="./images/san04.png" alt="">
-        <p>退款/售后</p>
-      </div>
-      <div class="fukuan">
-        <img src="./images/san05.png" alt="">
-        <p>全部订单</p>
-      </div>
+      <router-link to="/card">
+        <div class="fukuan">
+          <img src="./images/san02.png" alt="">
+          <p>待收货</p>
+        </div>
+      </router-link>
+
+      <router-link to="/fine">
+        <div class="fukuan">
+          <img src="./images/san03.png" alt="">
+          <p>待评价</p>
+        </div>
+      </router-link>
+
+      <router-link to="/fine">
+        <div class="fukuan">
+          <img src="./images/san04.png" alt="">
+          <p>退款/售后</p>
+        </div>
+      </router-link>
+
+      <router-link to="/fine">
+        <div class="fukuan">
+          <img src="./images/san05.png" alt="">
+          <p>全部订单</p>
+        </div>
+      </router-link>
     </div>
 		<div class="aui-user-list">
-			<a href="javascript:;" class="aui-flex ">
-				<div class="aui-cou-img">
-					<img class="cls1" src="./images/3.png" alt="">
-          <p>个人资料</p>
-          <img class="cls2" src="./images/next.png" alt="">
-				</div>
-			</a>
-			<a href="javascript:;" class="aui-flex ">
-				<div class="aui-cou-img">
-					<img class="cls1" src="./images/6.png" alt="">
-          <p>收获地址</p>
-          <img class="cls2" src="./images/next.png" alt="">
-				</div>
-			</a>
+      <router-link to="/contact">
+        <a href="javascript:;" class="aui-flex">
+          <div class="aui-cou-img" >
+            <img class="cls1" src="./images/3.png" alt="">
+            <p>点击添加</p>
+            <img class="cls2" src="./images/next.png" alt="">
+          </div>
+        </a>
+      </router-link>
+
+       <router-link to="/address">
+        <a href="javascript:;" class="aui-flex ">
+          <div class="aui-cou-img">
+            <img class="cls1" src="./images/6.png" alt="">
+            <p>收获地址</p>
+            <img class="cls2" src="./images/next.png" alt="">
+          </div>
+        </a>
+       </router-link>
+       
 			<a href="javascript:;" class="aui-flex ">
 				<div class="aui-cou-img">
 					<img class="cls1" src="./images/5.png" alt="">
@@ -107,16 +128,22 @@
           <img class="cls2" src="./images/next.png" alt="">
 				</div>
 			</a>
-			<a href="javascript:;" class="aui-flex ">
-				<div class="aui-cou-img">
-					<img class="cls1" src="./images/4.png" alt="">
-          <p>设置中心</p>
-          <img class="cls2" src="./images/next.png" alt="">
-				</div>
-				<div class="aui-arrow">
-					<span></span>
-				</div>
-			</a>
+
+      <router-link to="/setting">
+        <a href="javascript:;" class="aui-flex ">
+          <div class="aui-cou-img">
+            <img class="cls1" src="./images/4.png" alt="">
+            <p>设置中心</p>
+            <img class="cls2" src="./images/next.png" alt="">
+          </div>
+          <div class="aui-arrow">
+            <span></span>
+          </div>
+        </a>
+      </router-link>
+
+      <!-- <van-cell title="URL 跳转" is-link url="/vant/mobile.html" />
+      <van-cell title="路由跳转" is-link to="index" /> -->
 		</div>
 
     <!-- 视图 标签-->
@@ -132,12 +159,14 @@ export default {
       isShow:true
     }
   },
+  
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 @import '../../common/stylus/mixins.styl'
 .aui-flex
   display flex
+  box-shadow 0px 12px 8px -15px #d3d3d6
   .aui-user-img
     height 100%
     margin-right 1px
@@ -160,6 +189,7 @@ export default {
       font-size 10px
       float left
   .aui-arrow-go
+    margin-right -12px
     width 35%
     height 25%
     background-color green 
@@ -183,7 +213,11 @@ export default {
 .er-header
   display flex
   justify-content space-around
-  padding-top 20px
+  /* padding-top 20px */
+  margin-top 20px
+  /* -moz-box-shadow:2px 2px 10px 	#D3D3D3;
+  -webkit-box-shadow:2px 2px 10px #D3D3D3;
+  box-shadow:0px 2px 10px #D3D3D3; */
   .er-shoucang
     width 50px
     height 30px
@@ -194,13 +228,20 @@ export default {
     text-align center
     h3
       font-size 20px
+      color #000000
     span
       font-size 10px
+      color #000000
 
 .san-dingdan
   display flex
   justify-content space-around
-  padding-top 30px
+  /* padding-top 30px */
+  margin-top 20px
+  /* -moz-box-shadow:2px 2px 10px 	#D3D3D3;
+  -webkit-box-shadow:2px 2px 10px #D3D3D3;
+  box-shadow:2px 2px 10px #D3D3D3; */
+  box-shadow 0px 12px 8px -15px #d3d3d6
   .fukuan
     width 60px
     height 40px
@@ -211,18 +252,26 @@ export default {
       height 30px
     p
       font-size 6px
+      color #000000
 
 .aui-user-list
-  width 100%
+  width 95%
   height 50%
-  padding-top 30px
+  margin-top 30px
+  margin-left 10px
   position relative
+  /* -moz-box-shadow:2px 2px 10px 	#D3D3D3;
+  -webkit-box-shadow:2px 2px 10px #D3D3D3;
+  box-shadow:2px 2px 10px #D3D3D3; */
+  box-shadow 0px 12px 8px -15px #d3d3d6
   .aui-flex
     width 100%
+    box-shadow 0px 12px 8px -15px #d3d3d6
     .aui-cou-img
       clearFix()
-      margin 30px
+      margin 20px
       width 100%
+     
       .cls1 
         width 20px
         height 20px
@@ -233,6 +282,7 @@ export default {
         margin-left 10px
         font-size 13px
         float left
+        color #000000
         margin-top 3px
         vertical-align middle
       .cls2

@@ -10,6 +10,14 @@ import './vee-validate'
 Vue.config.productionTip = false 
 // 创建并暴露Vue实例对象
 /* eslint-disable no-new */
+import Vant from 'vant'
+import 'vant/lib/index.css'
+Vue.use(Vant)
+
+// import { Card } from 'vant'
+
+// Vue.use(Card)
+
 export default new Vue({
   // 容器
   el: '#app',

@@ -8,8 +8,14 @@ import Fine from '../pages/Mine/Fine/Fine.vue'
 import Login from '../pages/Login/Login.vue'
 import Register from '../pages/Register/Register.vue'
 import Detalis from '../pages/Detalis/Detalis.vue'
+import Card from '../pages/Mine/Card/Card.vue'
+import Receiving from '../pages/Mine/Receiving/Receiving.vue'
+import Contact from '../pages/Mine/Contact/Contact.vue'
+import Address from '../pages/Mine/Address/Address.vue'
+import Setting from '../pages/Mine/Setting/Setting.vue'
 
 export default [
+
   {
     path:'/home',
     component: Home,
@@ -62,7 +68,28 @@ export default [
     component:Fine
   },
   {
+    path:'/card',
+    component:Card
+  },
+  {
+    path:'/receiving',
+    component:Receiving
+  },
+  {
+    path:'/contact',
+    component:Contact
+  },
+  {
+    path:'/address',
+    component:Address
+  },
+  {
+    path:'/setting',
+    component:Setting
+  },
+  {
     path:'/',
     redirect:'/home'
   },
+  
 ]
